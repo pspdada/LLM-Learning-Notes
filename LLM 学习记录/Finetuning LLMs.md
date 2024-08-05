@@ -11,11 +11,11 @@
     - Lets you put more data into the model than what fits into the prompt
     - Gets the model to learn the data, rather than just get access to it
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled.png)
+    ![Untitled](Finetuning%20LLMs/Untitled.png)
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled%201.png)
+    ![Untitled](Finetuning%20LLMs/Untitled%201.png)
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled%202.png)
+    ![Untitled](Finetuning%20LLMs/Untitled%202.png)
     
     - Steers the model to more consistent outputs
     - Reduces hallucinations (幻觉)
@@ -23,11 +23,11 @@
     - Process is similar to the model's earlier training
 - Prompt Engineering vs. Finetuning
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled%203.png)
+    ![Untitled](Finetuning%20LLMs/Untitled%203.png)
     
 - Benefits of finetuning your own LLM
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled%204.png)
+    ![Untitled](Finetuning%20LLMs/Untitled%204.png)
     
 - What we'll be using to finetune
     - Low level: Pytorch (Meta)
@@ -38,7 +38,7 @@
 
 - Pretraining
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled%205.png)
+    ![Untitled](Finetuning%20LLMs/Untitled%205.png)
     
 - Finetuning after pretraining
     - Finetuning usually refers to training further
@@ -73,30 +73,30 @@
         - Clarity means knowing what's bad output vs. good output
 - First time finetuning
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled%206.png)
+    ![Untitled](Finetuning%20LLMs/Untitled%206.png)
     
 
 ## P4 Instruction Finetuning
 
 - What is instruction finetuning?
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled%207.png)
+    ![Untitled](Finetuning%20LLMs/Untitled%207.png)
     
 
 ## P5 Data preparation
 
 - What kind of data
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled%208.png)
+    ![Untitled](Finetuning%20LLMs/Untitled%208.png)
     
 - Steps to prepare your data
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled%209.png)
+    ![Untitled](Finetuning%20LLMs/Untitled%209.png)
     
 - Tokenizing your data
 is taking your text data and turning that intu numbers
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled%2010.png)
+    ![Untitled](Finetuning%20LLMs/Untitled%2010.png)
     
     ```python
     def tokenize_function(examples):
@@ -156,13 +156,13 @@ is taking your text data and turning that intu numbers
     - MMLU is a multitask metric covering elementary math, US history, computer science, law, and more.
     - TruthfulQA measures a model's propensity to reproduce falsehoods commonly found online.
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled%2011.png)
+    ![Untitled](Finetuning%20LLMs/Untitled%2011.png)
     
 - Error Analysis
     - Understand base model behavior before finetuning
     - Categorize errors: iterate on data to fix these problems  in data space
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled%2012.png)
+    ![Untitled](Finetuning%20LLMs/Untitled%2012.png)
     
 
 ## P8 Considerations on getting started now
@@ -179,7 +179,7 @@ is taking your text data and turning that intu numbers
     - increase model size for performance
 - Model Sizes x Compute
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled%2013.png)
+    ![Untitled](Finetuning%20LLMs/Untitled%2013.png)
     
 - PEFT: Parameter-Efficient Finetuning
     - LORA: Low-Rank Adaptation of LLMs
@@ -192,4 +192,4 @@ is taking your text data and turning that intu numbers
         - At inference, merge with main weights
     - Use LoRA for adapting to new, different tasks
     
-    ![Untitled](Finetuning%20LLMs%20e0946a4a2b38487a8610b78edd0f309e/Untitled%2014.png)
+    ![Untitled](Finetuning%20LLMs/Untitled%2014.png)

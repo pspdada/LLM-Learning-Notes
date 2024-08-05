@@ -59,7 +59,7 @@ $(x,y)$ = single training example, $(x^{(i)},y^{(i)}) = i^{th}$ training example
 - “Batch” gradient descent. "Batch": Each step of gradient descent uses all the training examples. 一次迭代训练所有样本
 - stochastic gradient descent:
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled.png)
     
 
 ## Week 2
@@ -76,7 +76,7 @@ $(x,y)$ = single training example, $(x^{(i)},y^{(i)}) = i^{th}$ training example
     $\vec{x}_j^{(i)}$
      = value of $j^{th}$ feature in the $i^{th}$ training example
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%201.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%201.png)
     
 - Multiple linear regression
     
@@ -90,13 +90,13 @@ $(x,y)$ = single training example, $(x^{(i)},y^{(i)}) = i^{th}$ training example
     
     numpy arrays use parallel processing (并行处理) hardware to compute
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%202.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%202.png)
     
 - Implement gradient descent for multiple linear regression with vectorization
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%203.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%203.png)
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%204.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%204.png)
     
 - An alternative way to gradient descent: Normal equation
     - Normal equation: only for linear regression to solve $w, b$ without iterations.
@@ -113,7 +113,7 @@ $(x,y)$ = single training example, $(x^{(i)},y^{(i)}) = i^{th}$ training example
         
         it will cause the gradient descent to run more slowly
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%205.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%205.png)
         
     - How to
         - Mean normalization(均值归一化)
@@ -125,19 +125,19 @@ $(x,y)$ = single training example, $(x^{(i)},y^{(i)}) = i^{th}$ training example
 
 ### Checking Gradient Descent for Convergence
 
-![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%206.png)
+![Untitled](Machine%20Learning%20Specialization/Untitled%206.png)
 
 ### Choosing the Learning Rate
 
-![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%207.png)
+![Untitled](Machine%20Learning%20Specialization/Untitled%207.png)
 
 ### Polynomial Regression
 
 多项式回归
 
-![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%208.png)
+![Untitled](Machine%20Learning%20Specialization/Untitled%208.png)
 
-![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%209.png)
+![Untitled](Machine%20Learning%20Specialization/Untitled%209.png)
 
 ## Week 3 Classification
 
@@ -147,17 +147,17 @@ binary classification: label $y$ can only be one of two values
 
 - Logistic Regression is an algorithm of classification
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2010.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2010.png)
     
 - Decision boundary
     
     The decision boundary of logistic regression is **$z=0$**
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2011.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2011.png)
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2012.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2012.png)
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2013.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2013.png)
     
 
 ### Cost Function for Logistic Regression
@@ -185,15 +185,15 @@ $J\left( \vec{w}, b\right) = - \frac{1}{m} \sum\limits_{i=1}^{m} \left[y^{(i)} \
 
 ### Gradient Descent Implementation
 
-![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2014.png)
+![Untitled](Machine%20Learning%20Specialization/Untitled%2014.png)
 
 - difference between linear regression and logistic regression
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2015.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2015.png)
     
     Sigmoid 函数把直线压缩到 0 和 1 之间
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2016.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2016.png)
     
 
 ### The Problem of Overfitting
@@ -204,9 +204,9 @@ overfit → high variance
 
 - Example
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2017.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2017.png)
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2018.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2018.png)
     
 - Tool to deal with **overfitting**
     - Collect more **training examples** to train the model
@@ -251,48 +251,48 @@ overfit → high variance
 
 - Usage
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2019.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2019.png)
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2020.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2020.png)
     
 - Neural network examples
     
     activation function (非线性激活函数)
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2021.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2021.png)
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2022.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2022.png)
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2023.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2023.png)
     
     - a more complex neural network
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2024.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2024.png)
         
     - forward propagation(向前传播)
 
 ### Carry out interference in TensorFlow
 
-![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2025.png)
+![Untitled](Machine%20Learning%20Specialization/Untitled%2025.png)
 
 - build a neural network
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2026.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2026.png)
     
 
 ## Week 2
 
 ### Train a Neural Network in TensorFlow
 
-![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2027.png)
+![Untitled](Machine%20Learning%20Specialization/Untitled%2027.png)
 
 - Details:
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2028.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2028.png)
     
     - Step 1: Create the model
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2029.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2029.png)
         
     - Step 2: Loss and cost functions
     for binary classification: binary cross entropy$L(f_{\vec{w},b}(\vec{x}^{(i)}), y^{(i)}) = -y^{(i)} \log(f_{\vec{w},b}(\vec{x}^{(i)})) - (1 - y^{(i)}) \log(1 - f_{\vec{w},b}(\vec{x}^{(i)}))$
@@ -300,23 +300,23 @@ overfit → high variance
     Compute derivatives for gradient descent using “back propagation”
 - Alternatives to the sigmoid activation
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2030.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2030.png)
     
 - Choosing activation functions
     - Output layer: when choose the activation function for output layer, usually depending on what is the label $y$ you are trying to predict
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2031.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2031.png)
         
     - Hidden layer: ReLU is most common
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2032.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2032.png)
     
 - Why do we need activation functions?
     
     > 因为神经网络中每一层的输入输出都是一个线性求和的过程，下一层的输出只是承接了上一层输入函数的线性变换，所以如果没有激活函数，那么无论你构造的神经网络多么复杂，有多少层，最后的输出都是输入的线性组合，纯粹的线性组合并不能够解决更为复杂的问题。而引入激活函数之后，我们会发现常见的激活函数都是非线性的，因此也会给神经元引入非线性元素，使得神经网络可以逼近其他的任何非线性函数，这样可以使得神经网络应用到更多非线性模型中。
     > 
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2033.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2033.png)
     
     if all g(z) are linear → no different than linear regression
     
@@ -329,7 +329,7 @@ overfit → high variance
 
 - def: target $y$ can take on more than two possibe values. 一个多分类问题
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2034.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2034.png)
     
 - Softmax
     
@@ -339,17 +339,17 @@ overfit → high variance
     
     - Def
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2035.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2035.png)
         
     - Cost
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2036.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2036.png)
         
         $L= -\sum\limits_{i=1}^{N} y_i \log a_i$
         
 - Neural Network with Softmax output
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2037.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2037.png)
     
     `loss = SparseCategoricalCrossentropy()`  稀疏分类交叉熵
     
@@ -360,7 +360,7 @@ associated with single input X, there may be many labels. 相当于多个二分�
 
 用了多个 sigmoid 而不是 softmax 函数
 
-![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/cbfac23a-e838-44f3-ab7f-cc58853bfe4e.png)
+![Untitled](Machine%20Learning%20Specialization/cbfac23a-e838-44f3-ab7f-cc58853bfe4e.png)
 
 ### Advanced Optimization
 
@@ -368,15 +368,15 @@ Adam Algorithm: Adaptive Moment estimation
 
 - Not just one global $\alpha$
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2038.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2038.png)
     
 - Can adjust the learning rate automatically
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/5d5af004-4572-4cac-8bff-fd4b20b56e52.png)
+    ![Untitled](Machine%20Learning%20Specialization/5d5af004-4572-4cac-8bff-fd4b20b56e52.png)
     
 - Code
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/b4f537f5-e63d-4222-accc-b1ae735a02b7.png)
+    ![Untitled](Machine%20Learning%20Specialization/b4f537f5-e63d-4222-accc-b1ae735a02b7.png)
     
 
 ### Additional Layer Types
@@ -395,7 +395,7 @@ Adam Algorithm: Adaptive Moment estimation
     - Need less training data (less prone to overfitting)
 - Convolutional Neural Network
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2039.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2039.png)
     
 
 ### Back **Propagation**
@@ -413,11 +413,11 @@ Conpute all the derivative: right to left (back prop)
 - Computation Graph
     - Example: let linear activation $a=g(z)=z$，only 1 layer of 1 node
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2040.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2040.png)
         
     - Another example:
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2041.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2041.png)
         
 - Advantage
     
@@ -435,7 +435,7 @@ Conpute all the derivative: right to left (back prop)
 
 - Notation
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2042.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2042.png)
     
 - Train/test procedure
     
@@ -444,15 +444,15 @@ Conpute all the derivative: right to left (back prop)
     
     - Linear regression (with squared error cost)
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/a204ee37-5011-4216-90e8-6ac0770eb1cd.png)
+        ![Untitled](Machine%20Learning%20Specialization/a204ee37-5011-4216-90e8-6ac0770eb1cd.png)
         
     - Classification problem
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2043.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2043.png)
         
         another way to define the $J$
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2044.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2044.png)
         
 
 ### Model selection (choosing a model)
@@ -461,9 +461,9 @@ Conpute all the derivative: right to left (back prop)
     
     cross validation set(交叉验证集), also called validation set or development set or dev set
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2045.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2045.png)
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2046.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2046.png)
     
 - Model selection
     - Procedure
@@ -472,9 +472,9 @@ Conpute all the derivative: right to left (back prop)
         - because we haven’t made any decisions using the test set, $J_{test}$ will be a fair and not overly optimistic estimate of the generalization error of the model to be reported
     - Example
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2047.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2047.png)
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2048.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2048.png)
         
 
 ### Diagnosing bias and variance
@@ -488,24 +488,24 @@ Conpute all the derivative: right to left (back prop)
     - High bias (underfit, 欠拟合): $J_{train}$ is high
     - High variance (overfit, 过拟合): $J_{cv}$ is much higher than $J_{train}$, which means the network does much better on data it has seen than on data it has not seen.
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2049.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2049.png)
     
     - “$J$ - degree of polynomial”
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2050.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2050.png)
         
 - Regularization and bias/variance
     - Linear regression with regularization
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2051.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2051.png)
         
     - Choosing the regularization parameter $\lambda$
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2052.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2052.png)
         
     - $J$ - $\lambda$
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2053.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2053.png)
         
         very small $\lambda$ → high variance (overfit)
         
@@ -522,13 +522,13 @@ What is the level of error you can reasonably hope the network to get to
 
 examples:
 
-![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2054.png)
+![Untitled](Machine%20Learning%20Specialization/Untitled%2054.png)
 
 ### Learning curves
 
 Learning curves are a way to indicate how learning algorithm is doing as a function of the amount of “experience” it has.
 
-![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2055.png)
+![Untitled](Machine%20Learning%20Specialization/Untitled%2055.png)
 
 - High bias
     
@@ -536,22 +536,22 @@ Learning curves are a way to indicate how learning algorithm is doing as a funct
     
     The model is too simple to be fitting into too much data
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2056.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2056.png)
     
 - High variance
     
     If a learning algorithm suffers from high variance (overfit,  过拟合), getting more training data is likely to help.
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2057.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2057.png)
     
 
 ### Debugging a learning algorithm
 
-![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2058.png)
+![Untitled](Machine%20Learning%20Specialization/Untitled%2058.png)
 
 Debug a learning algorithm to meet the bias variance tradeoff
 
-![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2059.png)
+![Untitled](Machine%20Learning%20Specialization/Untitled%2059.png)
 
 ### Bias/variance in Neural Networks
 
@@ -559,16 +559,16 @@ Neural networks offer us a way all of this dilemma of having to tradeoff bias an
 
 - Large neural networks that trained on small size dataset are low bias machines
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2060.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2060.png)
     
 - A large neural network will usually do as well or better than a smaller one so long as regularization is chosen appropriately.
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2061.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2061.png)
     
 
 ### Iterative loop of ML development
 
-![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2062.png)
+![Untitled](Machine%20Learning%20Specialization/Untitled%2062.png)
 
 ### Error analysis
 
@@ -576,7 +576,7 @@ Neural networks offer us a way all of this dilemma of having to tradeoff bias an
 - How: When algorithm misclassified of mislabled some of the examples in cross-validation set, **manually** examine (part of) them to categorize them based on common traits, to find out the most common types of errors to most fruitful to focus our attention
 - Example: detecting fishing emails
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2063.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2063.png)
     
 - Limitation: Error analysis can be a bit harder for tasks that humans are not good at.
 
@@ -587,16 +587,16 @@ Neural networks offer us a way all of this dilemma of having to tradeoff bias an
 The new training examples together with the original one have the same lable.
     - Examples:
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2064.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2064.png)
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2065.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2065.png)
         
     - Tips: Distortion (失真) introduced should be representation of the type of noise/distertions in the test set.
     Usually, adding purely random/meaningless noise to your data does not help.
 - Data synthesis
 Using artificial data inputs to create a new training example.
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2066.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2066.png)
     
 
 ### Transfer Learning
@@ -607,7 +607,7 @@ Using artificial data inputs to create a new training example.
     
 - How to
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2067.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2067.png)
     
     - Step1: Supervised Pretraining
         - Pretraing the neural network on a very large dataset
@@ -622,7 +622,7 @@ Using artificial data inputs to create a new training example.
     
     By pretraining, the neural network can detect pretty **generic features of images** such as edges … 
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2068.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2068.png)
     
 - Summary
     - Download open source neural network parameters pretrained on a large dataset with the same input type (e.g.,images, audio, text) as your application (or train your own).
@@ -630,11 +630,11 @@ Using artificial data inputs to create a new training example.
 
 ### Full cycle of a machine learning project
 
-![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2069.png)
+![Untitled](Machine%20Learning%20Specialization/Untitled%2069.png)
 
 - Deployment
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2070.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2070.png)
     
     When deploying a ML model, software engineering may be needed for:
     
@@ -662,15 +662,15 @@ When the ratio of positive to negative examples is very skewed (偏斜, very far
 
 - Rare disease classification example
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2071.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2071.png)
     
 - Precision/Recall
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2072.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2072.png)
     
 - Trading off precision and recall
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2073.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2073.png)
     
     - F1 score: the harmonic mean ([**调和平均数**](https://baike.baidu.com/item/%E8%B0%83%E5%92%8C%E5%B9%B3%E5%9D%87%E6%95%B0/9661021)) of $P$ and $R$, which pays more attention to whichever is much lower
     $\text{F1 score} = \frac{1}{\frac{1}{2}\left(\frac{1}{P}+\frac{1}{R}\right)} = 2\frac{PR}{P+R}$
@@ -685,7 +685,7 @@ When the ratio of positive to negative examples is very skewed (偏斜, very far
     
     top: root node, middle: decision nodes, bottom: leaf nodes
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2074.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2074.png)
     
 - Learning Process
     - Steps
@@ -700,7 +700,7 @@ When the ratio of positive to negative examples is very skewed (偏斜, very far
         - How to choose what feature to split on at each node to maximize purity (or minimize impurity)? 
         Use **information gain**
             
-            ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2075.png)
+            ![Untitled](Machine%20Learning%20Specialization/Untitled%2075.png)
             
         - When to stop splitting?
         The **stopping criterium**
@@ -719,7 +719,7 @@ When the ratio of positive to negative examples is very skewed (偏斜, very far
     
     example:
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2076.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2076.png)
     
 - Choosing a split: by **Information Gain**
     
@@ -729,29 +729,29 @@ When the ratio of positive to negative examples is very skewed (偏斜, very far
     
     def: $IG = H(p_{1}^{root}) - \left(w^{left}H(p_{1}^{left}) + w^{right}H(p_{1}^{right})\right)$
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2077.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2077.png)
     
 - Using one-hot encoding of cateorical feature
     
     If a categorical feature can take on $k$ values, use $k$ binary features (0 or 1 valued) to replace it.
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2078.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2078.png)
     
 - Continuous valued feature
     
     Try different thresholds, do the usual **information gain calculation** and split on the continuous value feature with the selected threshold if it gives you the best information gain out of all possible features to split on.
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2079.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2079.png)
     
 - Regression Tree (回归树)
     - Choose a split
     use **reduction of variance** rather than reduction of entropy
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2080.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2080.png)
         
     - Regression with Decision Trees
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2081.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2081.png)
         
 
 ### Tree ensembles
@@ -762,19 +762,19 @@ Tree ensemble is a collection of multiple trees
     
     A single tree is highly sensitive to smal changes of the data
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2082.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2082.png)
     
     use multiple trees to predict the result
     
     the final prediction is the average of all the predictions from the trees
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2083.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2083.png)
     
 - Sampling with replacement (带放回抽样)
     
     Sampling with replacement let us construct a new training set that’s different from our original training set by picking from all examples with equal $\frac{1}{m}$ probability, if we need a training set of size $m$ (duplicates in a training set is workable)
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2084.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2084.png)
     
 - Random Forest algorithm
     - Bagged decision tree
@@ -802,7 +802,7 @@ Tree ensemble is a collection of multiple trees
         - Built in regularization to prevent overfitting
         - Highly competitive algorithm for machine learning competitions (eg:Kaggle competitions)
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2085.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2085.png)
         
 
 ### When to use decision trees
@@ -834,18 +834,18 @@ A **clustering** **algorithm** (聚类) looks at a number of data points (withou
 
 - Applications
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2086.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2086.png)
     
 - K-means
     - K-means algorithm
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2087.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2087.png)
         
     - K-means for clusters that are not well separated
         
         can also do well
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2088.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2088.png)
         
     - K-means optimization objective
         - Notation
@@ -885,18 +885,18 @@ A **clustering** **algorithm** (聚类) looks at a number of data points (withou
             
             Run it multiple times to try to find the best local optima.
             
-            ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2089.png)
+            ![Untitled](Machine%20Learning%20Specialization/Untitled%2089.png)
             
     - Choosing the Number of Clusters $K$
         - Elbow method
             
-            ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2090.png)
+            ![Untitled](Machine%20Learning%20Specialization/Untitled%2090.png)
             
         - By purpose
         Sometimes, you're running K-means to get clusters to use for some later/downstream purpose.
         Evaluate K-means based on a metric (指标) for how well it performs for that later purpose.
             
-            ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2091.png)
+            ![Untitled](Machine%20Learning%20Specialization/Untitled%2091.png)
             
 
 ### Anomaly detection
@@ -904,13 +904,13 @@ A **clustering** **algorithm** (聚类) looks at a number of data points (withou
 - Intuition: Finding unusual events
     - Examle
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2092.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2092.png)
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2093.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2093.png)
         
     - method: Density estimation
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2094.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2094.png)
         
 - Gaussian (Normal) distribution
     
@@ -920,7 +920,7 @@ A **clustering** **algorithm** (聚类) looks at a number of data points (withou
     p(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
     $$
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2095.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2095.png)
     
     - Parameter estimation
         
@@ -997,7 +997,7 @@ A **clustering** **algorithm** (聚类) looks at a number of data points (withou
     - Non-gaussian features
     whatever transformation applied to the training set,  remember to apply the same transformation to cross validation and test set data as well.
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2096.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%2096.png)
     
 - Error analysis for anomaly detection
     - Want
@@ -1024,7 +1024,7 @@ Recommender Systems (推荐系统)
         
         Assume that we know in advance the values of the features of the movies $x^{(i)}$.
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2097.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2097.png)
         
         - Notition:
             
@@ -1057,7 +1057,7 @@ Recommender Systems (推荐系统)
         
         $J(x^{(i)}) = \frac{1}{2} \sum\limits_{j:r(i,j)=1} (w^{(j)}x^{(i)} + b^{(j)} - y^{(i,j)})^2 + \frac{\lambda}{2} \sum\limits_{k=1}^{n} (x_k^{(i)})^2$
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2098.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2098.png)
         
     - Collaborative Filtering Algorithm
         - Cost function to learn $w^{(1)},b^{(1)},...,w^{(n_u)},b^{(n_u)}$:
@@ -1069,7 +1069,7 @@ Recommender Systems (推荐系统)
         $\min\limits_{W,b,X} J(W, b, X)$
     - Gradient Descent
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%2099.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%2099.png)
         
 - Binary labels: favs, likes and clicks
     - Example applications
@@ -1082,7 +1082,7 @@ Recommender Systems (推荐系统)
             - 0 - did not engage after being shown item
             - ? - item not yet shown
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20100.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%20100.png)
         
     - Cost function for binary application
         
@@ -1099,24 +1099,24 @@ Recommender Systems (推荐系统)
 - Mean normalization
     - Users who have not rated any movies
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20101.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%20101.png)
         
     - Mean Normalization
         
         the effect ofthis algorithm is it will cause the initial guesses for the new user Eve to be just equal to the mean of whatever other users have rated these five movies. And that seems more reasonablecto take the average rating of the movies. rather than to guess that all the ratings by Eve will be zero.
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20102.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%20102.png)
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20103.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%20103.png)
         
 - TensorFlow implementation
     - Auto Diff
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20104.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%20104.png)
         
     - Collaborative Filtering Algorithm
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20105.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%20105.png)
     
 - Finding related items
     
@@ -1146,22 +1146,22 @@ Recommender Systems (推荐系统)
     Recommend items to you based on **features of user and item** to **find** **good match** between users and the items
     ****Vector size could be different between $x^{(j)}_u$ and $x^{(i)}_m$
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20106.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%20106.png)
         
 - Content-based filtering: Learning to match
     
     Compute the vectors, $v_u$ from $x_u$ for the users and $v_m$ from $x_m$ for the items and take dot products between them to try to find good matches.
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/9fdb821e-f31e-4178-beba-193cfe2c0d86.png)
+    ![Untitled](Machine%20Learning%20Specialization/9fdb821e-f31e-4178-beba-193cfe2c0d86.png)
     
 - Deep learning for content-based filtering
     - Neural network architecture
         
         the prediction by user $j$ on movie $i$,
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20107.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%20107.png)
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20108.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%20108.png)
         
     - Find movies similar
         
@@ -1183,7 +1183,7 @@ Recommender Systems (推荐系统)
             - Take list retrieved during the last step and rank using learned model
             Additional potimization: compute $V_m$ for all the movies in advance
                 
-                ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20109.png)
+                ![Untitled](Machine%20Learning%20Specialization/Untitled%20109.png)
                 
             - Display ranked items to user
         
@@ -1194,7 +1194,7 @@ Recommender Systems (推荐系统)
         
 - TensorFlow implementation
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20110.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%20110.png)
     
 
 ### Principal Comoonents Analysis
@@ -1205,17 +1205,17 @@ PCA algorithm (主成分分析)
     
     The idea of PCA is to find new axis and coordinates Use fewer numbers
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20111.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%20111.png)
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20112.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%20112.png)
     
 - Algorithm
     - Preprocess features: Normalized to have zero mean and apply feature scaling
     - Choose an axis
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20113.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%20113.png)
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20114.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%20114.png)
         
 - Applications
     - Visualization: redvce to 2or 3 features
@@ -1245,7 +1245,7 @@ PCA algorithm (主成分分析)
     
     The return depends on the actions you take
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20115.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%20115.png)
     
     Negative reward (负奖励): cause the algorithm to try to push out it as far into the future as possible
     
@@ -1261,7 +1261,7 @@ PCA algorithm (主成分分析)
     
     在状态 $s_t$ 时，采取动作 $a_t$ 后的状态 $s_{t+1}$ 和收益 $R_{t+1}$ 只与当前状态和动作有关，与历史状态无关
     
-    ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20116.png)
+    ![Untitled](Machine%20Learning%20Specialization/Untitled%20116.png)
     
 - Reinforcement Learning
     - **State-action value function** definition
@@ -1281,7 +1281,7 @@ PCA algorithm (主成分分析)
         The best possible return from state $s$ is $\underset{a}{\max}\ Q(s, a)$
         The best possible action in state $s$ is the action $a$ that gives $\underset{a}{\max}\ Q(s, a)$
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20117.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%20117.png)
         
     - Bellman Equation
         - notation
@@ -1334,7 +1334,7 @@ PCA algorithm (主成分分析)
         
         Use a neural network inside the reinforcement learning algorithm to learn the $Q(s,a)$.
         
-        ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20118.png)
+        ![Untitled](Machine%20Learning%20Specialization/Untitled%20118.png)
         
     - Learning Algorithm
         
@@ -1361,7 +1361,7 @@ PCA algorithm (主成分分析)
     - Algorithm refinement
         - Improved neural network architecture
             
-            ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20119.png)
+            ![Untitled](Machine%20Learning%20Specialization/Untitled%20119.png)
             
         - $\varepsilon$-greedy policy
             
@@ -1385,7 +1385,7 @@ PCA algorithm (主成分分析)
             
             If we have a very large training set, for every iteration, the algorithm just look at just a subset of the data to make each iteration runs much more quickly.
             
-            ![Untitled](Machine%20Learning%20Specialization%2086f3d355a4414ed4a08b628146ce1c1d/Untitled%20120.png)
+            ![Untitled](Machine%20Learning%20Specialization/Untitled%20120.png)
             
         - soft update
             

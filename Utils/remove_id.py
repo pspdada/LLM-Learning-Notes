@@ -1,76 +1,64 @@
 import os
 import re
 from pathlib import Path
+import shutil
 
-## 由于 Notion 导出的文件名和文件夹名中包含了随机生成的 ID，因此需要将这些 ID 去掉。
+# 由于 Notion 保存的文件名中包含了随机 ID，这个脚本用于移除这些 ID，并且修正 .md 文件中的引用
 
 # 获取当前工作目录
 current_directory = Path.cwd()
 
-
-def remove_random_ids():
-    """
-    Removes the random IDs from filenames and directory names in the current directory.
-    """
-    removed_ids = ["fea49c3f60fc40dca024c5193c10e201"]
-
-    directory = current_directory / 'LLM 学习记录'
-    print(directory)
-
-    # 遍历所有的 .md 文件
-    for file_path in directory.glob('*.md'):
-        new_name = re.sub(r'(.*) ([a-zA-Z0-9]+)\.md$', r'\1.md', file_path.name)
-        if new_name != file_path.name:
-            new_file_path = file_path.with_name(new_name)
-            # 使用删去的字符串填充 removed_ids
-            removed_ids.append(re.sub(r'(.*) ([a-zA-Z0-9]+)\.md$', r'\2', file_path.name))
-            file_path.rename(new_file_path)
-
-    # 遍历所有的子目录
-    for folder_path in directory.iterdir():
-        if folder_path.is_dir():
-            new_name = re.sub(r'(.*) ([a-zA-Z0-9]+)$', r'\1', folder_path.name)
-            if new_name != folder_path.name:
-                new_folder_path = folder_path.with_name(new_name)
-                folder_path.rename(new_folder_path)
-    # 保存 removed_ids 至文件
-    with open("removed_ids.txt", "w") as f:
-        for id in removed_ids:
-            f.write(id + "\n")
+# 正则表达式，用于匹配文件和文件夹名中的随机ID
+id_pattern = re.compile(r'(%20|\s)\w{32}')
 
 
-def update_md_links():
-    """
-    Updates links within .md files to reflect the removal of random IDs.
-    """
-    # 读取 removed_ids
-    with open("removed_ids.txt", "r") as f:
-        removed_ids = f.read().splitlines()
-    # 遍历所有的 .md 文件
-    file_paths = [file_path for file_path in current_directory.glob('**/*.md') if file_path.is_file()]
-    file_paths.extend(
-        [file_path for file_path in (current_directory / 'LLM 学习记录').glob('**/*.md') if file_path.is_file()])
-    for file_path in file_paths:
-        with open(file_path, 'r+', encoding='utf-8') as file:
-            content = file.read()
+# 处理资源文件夹和 .md 文件的名称
+def remove_ids_from_names():
+    # 遍历 LLM 学习记录 文件夹
+    llm_folder = current_directory / "LLM 学习记录"
+    for item in llm_folder.iterdir():
+        # 检查是否是资源文件夹或 .md 文件
+        if item.is_dir() or item.suffix == ".md":
+            # 去除名称中的ID
+            new_name = re.sub(id_pattern, '', item.name)
+            new_path = item.with_name(new_name)
 
-            # 对每一行进行处理
-            updated_lines = []
-            for line in content.splitlines():
-                # 匹配并替换文件内部的链接
-                for id in removed_ids:
-                    line = re.sub(r'\b%20' + re.escape(id) + r'\b', '', line)
+            # 检查新路径是否已经存在
+            if new_path.exists():
+                if item.is_dir():
+                    # 如果是文件夹，将内容复制（覆盖）到无ID的文件夹
+                    for sub_item in item.iterdir():
+                        dest = new_path / sub_item.name
+                        if sub_item.is_file():
+                            shutil.copy2(sub_item, dest)
+                        elif sub_item.is_dir():
+                            if dest.exists():
+                                shutil.rmtree(dest)
+                            shutil.copytree(sub_item, dest)
+                    # 删除有ID的文件夹
+                    shutil.rmtree(item)
+                    print(f"Copied and removed: {item.name} -> {new_name}")
+                else:
+                    # 如果是文件且目标文件已存在，暂时不处理
+                    print(f"Skipping: {item.name} -> {new_name} (file already exists)")
+            else:
+                # 重命名文件或文件夹
+                item.rename(new_path)
+                print(f"Renamed: {item.name} -> {new_name}")
 
-                updated_lines.append(line)
-            # 更新文件内容
-            file.seek(0)
-            file.write(content)
-            file.truncate()
+
+# 修正 .md 文件中的引用
+def fix_md_references():
+    llm_folder = current_directory / "LLM 学习记录"
+    for md_file in llm_folder.glob("*.md"):
+        content = md_file.read_text(encoding="utf-8")
+        new_content = re.sub(id_pattern, '', content)
+        if new_content != content:
+            md_file.write_text(new_content, encoding="utf-8")
+            print(f"Updated references in: {md_file.name}")
 
 
 if __name__ == "__main__":
-    # 移除随机编号
-    remove_random_ids()
-    # 更新 .md 文件中的链接
-    update_md_links()
+    remove_ids_from_names()
+    fix_md_references()
     print("Processing complete.")
